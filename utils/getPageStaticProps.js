@@ -15,6 +15,12 @@ export const getPageStaticProps = async (context) => {
         nodeByUri(uri: $uri) {
           ... on Page {
             id
+            title
+            blocks(postTemplate: false)
+          }
+          ... on Property {
+            id
+            title
             blocks(postTemplate: false)
           }
         }
